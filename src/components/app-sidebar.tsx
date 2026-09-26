@@ -1,4 +1,4 @@
-import { BookOpen, Home } from "lucide-react";
+import { BookOpen, Home, LibraryBig } from "lucide-react";
 import { Link, useLocation } from "react-router";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -23,7 +23,8 @@ const ROLE = "ADMIN";
 
 const items = [
   { title: "หน้าแรก", url: "/", icon: Home },
-  { title: "จัดการการลงทะเบียน", url: "/admin/enrollments", icon: BookOpen },
+  { title: "จัดการวิชาเรียน", url: "/admin/courses", icon: BookOpen },
+  { title: "จัดการการลงทะเบียน", url: "/admin/enrollments", icon: LibraryBig },
 ];
 
 export function AppSidebar() {
@@ -53,6 +54,7 @@ export function AppSidebar() {
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
+        
       </SidebarContent>
 
       <SidebarFooter>
@@ -71,6 +73,7 @@ export function AppSidebar() {
             </Badge>
           </div>
         </div>
+        
       </SidebarFooter>
     </Sidebar>
   );
